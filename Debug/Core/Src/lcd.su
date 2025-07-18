@@ -1,0 +1,8 @@
+../Core/Src/lcd.c:8:6:lcd_reset	8	static
+../Core/Src/lcd.c:19:20:lcd_ON	16	static
+../Core/Src/lcd.c:42:20:lcd_ALLpixels	16	static
+../Core/Src/lcd.c:65:20:lcd_RAMpixels	16	static
+../Core/Src/lcd.c:90:20:lcd_OFF	16	static
+../Core/Src/lcd.c:117:20:lcd_setcolumn_address	16	static
+../Core/Src/lcd.c:124:20:lcd_setpage_address	24	static
+../Core/Src/lcd.c:150:6:wire4SPI_init	8	static
