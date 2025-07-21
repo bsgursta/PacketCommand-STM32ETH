@@ -8,6 +8,7 @@ void AppMain(void){
 	//lcd_reset();
 	//wire4SPI_init();
 	lcd_ON();
+	lcd_OFF();
 	//lcd_ALLpixels();
 	//lcd_setpage_address(7);
 

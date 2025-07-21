@@ -1,0 +1,9 @@
+../Core/Src/lcd.c:7:19:lcd_transfer	1
+../Core/Src/lcd.c:31:6:lcd_reset	1
+../Core/Src/lcd.c:43:20:lcd_ON	1
+../Core/Src/lcd.c:52:20:lcd_ALLpixels	1
+../Core/Src/lcd.c:60:20:lcd_RAMpixels	1
+../Core/Src/lcd.c:70:20:lcd_OFF	1
+../Core/Src/lcd.c:83:20:lcd_setcolumn_address	1
+../Core/Src/lcd.c:91:20:lcd_setpage_address	1
+../Core/Src/lcd.c:104:6:wire4SPI_init	1

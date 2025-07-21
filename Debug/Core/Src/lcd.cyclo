@@ -1,8 +1,8 @@
 ../Core/Src/lcd.c:8:6:lcd_reset	1
 ../Core/Src/lcd.c:19:20:lcd_ON	1
-../Core/Src/lcd.c:42:20:lcd_ALLpixels	1
-../Core/Src/lcd.c:65:20:lcd_RAMpixels	1
-../Core/Src/lcd.c:90:20:lcd_OFF	2
-../Core/Src/lcd.c:117:20:lcd_setcolumn_address	1
-../Core/Src/lcd.c:124:20:lcd_setpage_address	2
-../Core/Src/lcd.c:150:6:wire4SPI_init	1
+../Core/Src/lcd.c:45:20:lcd_ALLpixels	1
+../Core/Src/lcd.c:68:20:lcd_RAMpixels	1
+../Core/Src/lcd.c:93:20:lcd_OFF	2
+../Core/Src/lcd.c:120:20:lcd_setcolumn_address	1
+../Core/Src/lcd.c:127:20:lcd_setpage_address	2
+../Core/Src/lcd.c:153:6:wire4SPI_init	1

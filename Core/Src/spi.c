@@ -1,0 +1,4 @@
+//Baremetal spi attempt
+
+HALF
+
