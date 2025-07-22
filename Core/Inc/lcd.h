@@ -5,8 +5,9 @@
 
 //4-wire SPI
 
-void wire4SPI_init(void);
-void lcd_reset(void);
+HAL_StatusTypeDef lcd_4SPI_init(void);
+HAL_StatusTypeDef lcd_reset(void);
+
 HAL_StatusTypeDef lcd_transfer(uint8_t data);
 
 HAL_StatusTypeDef  lcd_ON(void);
@@ -16,6 +17,11 @@ HAL_StatusTypeDef  lcd_RAMpixels(void);
 
 HAL_StatusTypeDef  lcd_setcolumn_address(int column_num);
 HAL_StatusTypeDef  lcd_setpage_address(int page_num);
+
+HAL_StatusTypeDef setPageaddressing();
+HAL_StatusTypeDef setVerticaladdressing();
+
+HAL_StatusTypeDef lcd_writeRAM(uint8_t data);
 
 
 
