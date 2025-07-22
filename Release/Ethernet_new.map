@@ -136,6 +136,12 @@ Discarded input sections
  .text          0x00000000        0x0 ./Core/Src/main.o
  .data          0x00000000        0x0 ./Core/Src/main.o
  .bss           0x00000000        0x0 ./Core/Src/main.o
+ .text          0x00000000        0x0 ./Core/Src/spi.o
+ .data          0x00000000        0x0 ./Core/Src/spi.o
+ .bss           0x00000000        0x0 ./Core/Src/spi.o
+ .comment       0x00000000       0x44 ./Core/Src/spi.o
+ .ARM.attributes
+                0x00000000       0x32 ./Core/Src/spi.o
  .text          0x00000000        0x0 ./Core/Src/stm32f7xx_hal_msp.o
  .data          0x00000000        0x0 ./Core/Src/stm32f7xx_hal_msp.o
  .bss           0x00000000        0x0 ./Core/Src/stm32f7xx_hal_msp.o
@@ -2299,6 +2305,7 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 LOAD ./Core/Src/app_main.o
 LOAD ./Core/Src/lcd.o
 LOAD ./Core/Src/main.o
+LOAD ./Core/Src/spi.o
 LOAD ./Core/Src/stm32f7xx_hal_msp.o
 LOAD ./Core/Src/stm32f7xx_it.o
 LOAD ./Core/Src/syscalls.o
