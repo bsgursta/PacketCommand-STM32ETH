@@ -96,7 +96,6 @@ HAL_StatusTypeDef setPageaddressing(){
 	//pull A0 low (PD7)
 	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_7, GPIO_PIN_RESET);
 
-
 	return lcd_transfer(data);
 }
 
@@ -179,6 +178,11 @@ HAL_StatusTypeDef lcd_4SPI_init(){
 	lcd_OFF();
 
 	return HAL_OK;
+
+}
+
+//set the entirety of the screen to 0, wiping the screen.
+HAL_StatusTypeDef  eraseLCD(void){
 
 }
 

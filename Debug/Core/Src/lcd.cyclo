@@ -5,8 +5,9 @@
 ../Core/Src/lcd.c:64:20:lcd_RAMpixels	1
 ../Core/Src/lcd.c:78:20:lcd_OFF	1
 ../Core/Src/lcd.c:93:19:setPageaddressing	1
-../Core/Src/lcd.c:104:19:setVerticaladdressing	1
-../Core/Src/lcd.c:118:20:lcd_setpage_address	1
-../Core/Src/lcd.c:133:20:lcd_setcolumn_address	5
-../Core/Src/lcd.c:160:19:lcd_writeRAM	1
-../Core/Src/lcd.c:170:19:lcd_4SPI_init	1
+../Core/Src/lcd.c:103:19:setVerticaladdressing	1
+../Core/Src/lcd.c:117:20:lcd_setpage_address	1
+../Core/Src/lcd.c:132:20:lcd_setcolumn_address	5
+../Core/Src/lcd.c:159:19:lcd_writeRAM	1
+../Core/Src/lcd.c:169:19:lcd_4SPI_init	1
+../Core/Src/lcd.c:185:20:eraseLCD	1

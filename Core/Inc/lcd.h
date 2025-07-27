@@ -10,6 +10,7 @@ HAL_StatusTypeDef lcd_reset(void);
 
 HAL_StatusTypeDef lcd_transfer(uint8_t data);
 
+HAL_StatusTypeDef  eraseLCD(void);
 HAL_StatusTypeDef  lcd_ON(void);
 HAL_StatusTypeDef  lcd_ALLpixels(void);
 HAL_StatusTypeDef  lcd_OFF(void);

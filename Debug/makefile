@@ -44,34 +44,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Ethernet_new
+BUILD_ARTIFACT_NAME := ethernet
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Ethernet_new.elf \
+ethernet.elf \
 
 MAP_FILES += \
-Ethernet_new.map \
+ethernet.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Ethernet_new.list \
+ethernet.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Ethernet_new.elf secondary-outputs
+main-build: ethernet.elf secondary-outputs
 
 # Tool invocations
-Ethernet_new.elf Ethernet_new.map: $(OBJS) $(USER_OBJS) /home/bryan/STM32CubeIDE/Workspace_new/Ethernet_new/STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Ethernet_new.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"/home/bryan/STM32CubeIDE/Workspace_new/Ethernet_new/STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ethernet_new.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ethernet.elf ethernet.map: $(OBJS) $(USER_OBJS) C:\Users\bryan\STM32CubeIDE\workplace_ethernet\ethernet\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ethernet.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\bryan\STM32CubeIDE\workplace_ethernet\ethernet\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ethernet.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -80,14 +80,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Ethernet_new.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Ethernet_new.list"
+ethernet.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "ethernet.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Ethernet_new.elf Ethernet_new.list Ethernet_new.map default.size.stdout
+	-$(RM) default.size.stdout ethernet.elf ethernet.list ethernet.map
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
