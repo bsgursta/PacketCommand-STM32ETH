@@ -33,7 +33,7 @@ HAL_StatusTypeDef lcd_reset(void){
 }
 
 //turn LCD on to match RAM data
-HAL_StatusTypeDef  lcd_ON(void){
+HAL_StatusTypeDef  onLCD(void){
 
 	//lcd on data
 	uint8_t data = 0xAF;
@@ -75,7 +75,7 @@ HAL_StatusTypeDef  lcd_RAMpixels(void){
 
 
 //turn lcd OFF
-HAL_StatusTypeDef  lcd_OFF(void){
+HAL_StatusTypeDef  offLCD(void){
 
 	//lcd off data
 	uint8_t data = 0xAE;
@@ -160,7 +160,11 @@ HAL_StatusTypeDef lcd_writeRAM(uint8_t data){
 	//pull A0 high
 	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_7, GPIO_PIN_SET);
 
-	return lcd_transfer(data);
+	HAL_StatusTypeDef status = lcd_transfer(data);
+
+	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_7, GPIO_PIN_RESET);
+
+	return status;
 }
 
 //initialize SPI protocol with 4 wire setup
@@ -174,15 +178,69 @@ HAL_StatusTypeDef lcd_4SPI_init(){
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_SET);
 
 	//dummy transmission for SPI
-	lcd_ON();
-	lcd_OFF();
+	onLCD();
+	offLCD();
 
 	return HAL_OK;
 
 }
 
 //set the entirety of the screen to 0, wiping the screen.
-HAL_StatusTypeDef  eraseLCD(void){
+HAL_StatusTypeDef  clearLCD(void){
 
+	int errors = 0;
+
+	for(int a = 0; a < 16; a++){
+		lcd_setpage_address(a);
+		lcd_setcolumn_address(0);
+
+		for(int i = 0; i < 128; i++){
+			//starting point for my LCD
+			if(i == 32){
+				__NOP();
+			}
+
+			//ending point of my LCD
+			if(i == 97){
+				__NOP();
+			}
+
+			if(lcd_writeRAM(0x00) != HAL_OK){
+				errors +=1;
+			}
+			//HAL_Delay(10);
+		}
+	}
+
+	if(errors == 0){
+		return HAL_OK;
+	}
+	else{
+		return HAL_ERROR;
+	}
 }
 
+//fill the LCD with 1 bits, making it turn off. Include delay for visual assistance
+HAL_StatusTypeDef  fillLCD(void){
+
+	int errors = 0;
+
+	for(int a = 0; a < 16; a++){
+		lcd_setpage_address(a);
+		lcd_setcolumn_address(0);
+
+		for(int i = 0; i < 128; i++){
+			if(lcd_writeRAM(0xFF) != HAL_OK){
+				errors +=1;
+			}
+			//HAL_Delay(5);
+		}
+	}
+
+	if(errors == 0){
+		return HAL_OK;
+	}
+	else{
+		return HAL_ERROR;
+	}
+}

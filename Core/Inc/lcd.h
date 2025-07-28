@@ -10,10 +10,12 @@ HAL_StatusTypeDef lcd_reset(void);
 
 HAL_StatusTypeDef lcd_transfer(uint8_t data);
 
-HAL_StatusTypeDef  eraseLCD(void);
-HAL_StatusTypeDef  lcd_ON(void);
+HAL_StatusTypeDef  clearLCD(void);
+HAL_StatusTypeDef  fillLCD(void);
+
+HAL_StatusTypeDef  onLCD(void);
 HAL_StatusTypeDef  lcd_ALLpixels(void);
-HAL_StatusTypeDef  lcd_OFF(void);
+HAL_StatusTypeDef  offLCD(void);
 HAL_StatusTypeDef  lcd_RAMpixels(void);
 
 HAL_StatusTypeDef  lcd_setcolumn_address(int column_num);
