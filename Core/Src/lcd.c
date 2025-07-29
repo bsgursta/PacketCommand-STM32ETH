@@ -6,7 +6,7 @@
 
 HAL_StatusTypeDef lcd_transfer(uint8_t data){
 	//pull CS low
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_6, GPIO_PIN_RESET);
 
 	//transmit the data
 
@@ -15,7 +15,7 @@ HAL_StatusTypeDef lcd_transfer(uint8_t data){
 
 	}
 	//pull CS high
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_6, GPIO_PIN_SET);
 
 	return HAL_OK;
 
@@ -169,10 +169,10 @@ HAL_StatusTypeDef lcd_writeRAM(uint8_t data){
 
 //initialize SPI protocol with 4 wire setup
 //includes SCL,SI,A0, and /CS
-//Pins: PB10 -> SCK, PC3 -> SI(MOSI), RES -> PC0, A0(D/C) -> PD7, CS -> PA3
+//Pins: PB10 -> SCK, PC3 -> SI(MOSI), RES -> PC0, A0(D/C) -> PD7, CS -> PD6
 HAL_StatusTypeDef lcd_4SPI_init(){
 	//pull CS high
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_6, GPIO_PIN_SET);
 
 	//pull RES pin up
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_SET);

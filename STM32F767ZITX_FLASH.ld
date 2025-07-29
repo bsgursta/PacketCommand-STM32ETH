@@ -44,7 +44,8 @@ _Min_Stack_Size = 0x400; /* required amount of stack */
 /* Memories definition */
 MEMORY
 {
-  RAM    (xrw)    : ORIGIN = 0x20000000,   LENGTH = 512K
+  RAM    (xrw)    : ORIGIN = 0x20000000,   LENGTH = 496K
+  SRAM2   (xrw)		: ORIGIN = 0x2007C000,	LENGTH = 16K
   FLASH    (rx)    : ORIGIN = 0x8000000,   LENGTH = 2048K
 }
 
@@ -175,6 +176,22 @@ SECTIONS
     . = . + _Min_Stack_Size;
     . = ALIGN(8);
   } >RAM
+  
+  /*Modification start */
+  
+  .lwip_sec(NOLOAD):
+  {
+  	. = ABSOLUTE(0x2007c000);
+  	*(.RxDecripSection)
+  	
+  	. = ABSOLUTE(0x2007c0a0);
+  	*(.TxDecripSection)
+  	
+  	. = ABSOLUTE(0x2007c140);
+  	*(.LwIPHeap)
+  } >SRAM2
+  /*Modification end */
+  	
 
   /* Remove information from the compiler libraries */
   /DISCARD/ :
