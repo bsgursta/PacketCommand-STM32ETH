@@ -39,15 +39,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  0002bab6  00000000  00000000  0003c7bc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00024c5a  00000000  00000000  00068272  2**0
+ 18 .debug_line   0002350d  00000000  00000000  00068272  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    0011834a  00000000  00000000  0008cecc  2**0
+ 19 .debug_str    00118342  00000000  00000000  0008b77f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  001a5216  2**0
+ 20 .comment      00000043  00000000  00000000  001a3ac1  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  0000860c  00000000  00000000  001a525c  2**2
+ 21 .debug_frame  0000860c  00000000  00000000  001a3b04  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000066  00000000  00000000  001ad868  2**0
+ 22 .debug_line_str 0000005e  00000000  00000000  001ac110  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -87,8 +87,8 @@ Disassembly of section .text:
  8000246:	bf08      	it	eq
  8000248:	2800      	cmpeq	r0, #0
  800024a:	bf1c      	itt	ne
- 800024c:	f04f 31ff 	movne.w	r1, #4294967295
- 8000250:	f04f 30ff 	movne.w	r0, #4294967295
+ 800024c:	f04f 31ff 	movne.w	r1, #4294967295	@ 0xffffffff
+ 8000250:	f04f 30ff 	movne.w	r0, #4294967295	@ 0xffffffff
  8000254:	f000 b988 	b.w	8000568 <__aeabi_idiv0>
  8000258:	f1ad 0c08 	sub.w	ip, sp, #8
  800025c:	e96d ce04 	strd	ip, lr, [sp, #-16]!
@@ -127,7 +127,7 @@ Disassembly of section .text:
  80002ba:	429a      	cmp	r2, r3
  80002bc:	d909      	bls.n	80002d2 <__udivmoddi4+0x62>
  80002be:	18fb      	adds	r3, r7, r3
- 80002c0:	f101 30ff 	add.w	r0, r1, #4294967295
+ 80002c0:	f101 30ff 	add.w	r0, r1, #4294967295	@ 0xffffffff
  80002c4:	f080 80ea 	bcs.w	800049c <__udivmoddi4+0x22c>
  80002c8:	429a      	cmp	r2, r3
  80002ca:	f240 80e7 	bls.w	800049c <__udivmoddi4+0x22c>
@@ -142,7 +142,7 @@ Disassembly of section .text:
  80002e6:	459c      	cmp	ip, r3
  80002e8:	d909      	bls.n	80002fe <__udivmoddi4+0x8e>
  80002ea:	18fb      	adds	r3, r7, r3
- 80002ec:	f100 32ff 	add.w	r2, r0, #4294967295
+ 80002ec:	f100 32ff 	add.w	r2, r0, #4294967295	@ 0xffffffff
  80002f0:	f080 80d6 	bcs.w	80004a0 <__udivmoddi4+0x230>
  80002f4:	459c      	cmp	ip, r3
  80002f6:	f240 80d3 	bls.w	80004a0 <__udivmoddi4+0x230>
@@ -196,7 +196,7 @@ Disassembly of section .text:
  800037a:	429a      	cmp	r2, r3
  800037c:	d907      	bls.n	800038e <__udivmoddi4+0x11e>
  800037e:	18fb      	adds	r3, r7, r3
- 8000380:	f10c 38ff 	add.w	r8, ip, #4294967295
+ 8000380:	f10c 38ff 	add.w	r8, ip, #4294967295	@ 0xffffffff
  8000384:	d202      	bcs.n	800038c <__udivmoddi4+0x11c>
  8000386:	429a      	cmp	r2, r3
  8000388:	f200 80e0 	bhi.w	800054c <__udivmoddi4+0x2dc>
@@ -209,7 +209,7 @@ Disassembly of section .text:
  80003a0:	429c      	cmp	r4, r3
  80003a2:	d907      	bls.n	80003b4 <__udivmoddi4+0x144>
  80003a4:	18fb      	adds	r3, r7, r3
- 80003a6:	f102 30ff 	add.w	r0, r2, #4294967295
+ 80003a6:	f102 30ff 	add.w	r0, r2, #4294967295	@ 0xffffffff
  80003aa:	d202      	bcs.n	80003b2 <__udivmoddi4+0x142>
  80003ac:	429c      	cmp	r4, r3
  80003ae:	f200 80ca 	bhi.w	8000546 <__udivmoddi4+0x2d6>
@@ -237,7 +237,7 @@ Disassembly of section .text:
  80003f6:	fa02 f201 	lsl.w	r2, r2, r1
  80003fa:	d909      	bls.n	8000410 <__udivmoddi4+0x1a0>
  80003fc:	193c      	adds	r4, r7, r4
- 80003fe:	f100 3aff 	add.w	sl, r0, #4294967295
+ 80003fe:	f100 3aff 	add.w	sl, r0, #4294967295	@ 0xffffffff
  8000402:	f080 809c 	bcs.w	800053e <__udivmoddi4+0x2ce>
  8000406:	45a6      	cmp	lr, r4
  8000408:	f240 8099 	bls.w	800053e <__udivmoddi4+0x2ce>
@@ -252,7 +252,7 @@ Disassembly of section .text:
  8000428:	45a4      	cmp	ip, r4
  800042a:	d908      	bls.n	800043e <__udivmoddi4+0x1ce>
  800042c:	193c      	adds	r4, r7, r4
- 800042e:	f103 3eff 	add.w	lr, r3, #4294967295
+ 800042e:	f103 3eff 	add.w	lr, r3, #4294967295	@ 0xffffffff
  8000432:	f080 8082 	bcs.w	800053a <__udivmoddi4+0x2ca>
  8000436:	45a4      	cmp	ip, r4
  8000438:	d97f      	bls.n	800053a <__udivmoddi4+0x2ca>
@@ -314,7 +314,7 @@ Disassembly of section .text:
  80004d6:	b280      	uxth	r0, r0
  80004d8:	d93e      	bls.n	8000558 <__udivmoddi4+0x2e8>
  80004da:	1879      	adds	r1, r7, r1
- 80004dc:	f108 3cff 	add.w	ip, r8, #4294967295
+ 80004dc:	f108 3cff 	add.w	ip, r8, #4294967295	@ 0xffffffff
  80004e0:	d201      	bcs.n	80004e6 <__udivmoddi4+0x276>
  80004e2:	4589      	cmp	r9, r1
  80004e4:	d81f      	bhi.n	8000526 <__udivmoddi4+0x2b6>
@@ -327,7 +327,7 @@ Disassembly of section .text:
  80004fc:	4542      	cmp	r2, r8
  80004fe:	d229      	bcs.n	8000554 <__udivmoddi4+0x2e4>
  8000500:	18ba      	adds	r2, r7, r2
- 8000502:	f109 31ff 	add.w	r1, r9, #4294967295
+ 8000502:	f109 31ff 	add.w	r1, r9, #4294967295	@ 0xffffffff
  8000506:	d2c4      	bcs.n	8000492 <__udivmoddi4+0x222>
  8000508:	4542      	cmp	r2, r8
  800050a:	d2c2      	bcs.n	8000492 <__udivmoddi4+0x222>
@@ -3205,7 +3205,7 @@ __weak void HAL_Delay(uint32_t Delay)
   /* Add a freq to guarantee minimum wait */
   if (wait < HAL_MAX_DELAY)
  800146a:	68fb      	ldr	r3, [r7, #12]
- 800146c:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 800146c:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8001470:	d005      	beq.n	800147e <HAL_Delay+0x26>
   {
     wait += (uint32_t)(uwTickFreq);
@@ -3439,7 +3439,7 @@ __STATIC_INLINE uint32_t NVIC_EncodePriority (uint32_t PriorityGroup, uint32_t P
 
   return (
            ((PreemptPriority & (uint32_t)((1UL << (PreemptPriorityBits)) - 1UL)) << SubPriorityBits) |
- 80015c8:	f04f 32ff 	mov.w	r2, #4294967295
+ 80015c8:	f04f 32ff 	mov.w	r2, #4294967295	@ 0xffffffff
  80015cc:	69bb      	ldr	r3, [r7, #24]
  80015ce:	fa02 f303 	lsl.w	r3, r2, r3
  80015d2:	43da      	mvns	r2, r3
@@ -3448,7 +3448,7 @@ __STATIC_INLINE uint32_t NVIC_EncodePriority (uint32_t PriorityGroup, uint32_t P
  80015d8:	697b      	ldr	r3, [r7, #20]
  80015da:	409a      	lsls	r2, r3
            ((SubPriority     & (uint32_t)((1UL << (SubPriorityBits    )) - 1UL)))
- 80015dc:	f04f 31ff 	mov.w	r1, #4294967295
+ 80015dc:	f04f 31ff 	mov.w	r1, #4294967295	@ 0xffffffff
  80015e0:	697b      	ldr	r3, [r7, #20]
  80015e2:	fa01 f303 	lsl.w	r3, r1, r3
  80015e6:	43d9      	mvns	r1, r3
@@ -9946,7 +9946,7 @@ HAL_StatusTypeDef HAL_SPI_Transmit(SPI_HandleTypeDef *hspi, const uint8_t *pData
  8003b9a:	429a      	cmp	r2, r3
  8003b9c:	d803      	bhi.n	8003ba6 <HAL_SPI_Transmit+0x164>
  8003b9e:	683b      	ldr	r3, [r7, #0]
- 8003ba0:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8003ba0:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8003ba4:	d102      	bne.n	8003bac <HAL_SPI_Transmit+0x16a>
  8003ba6:	683b      	ldr	r3, [r7, #0]
  8003ba8:	2b00      	cmp	r3, #0
@@ -10123,7 +10123,7 @@ HAL_StatusTypeDef HAL_SPI_Transmit(SPI_HandleTypeDef *hspi, const uint8_t *pData
  8003ca4:	429a      	cmp	r2, r3
  8003ca6:	d803      	bhi.n	8003cb0 <HAL_SPI_Transmit+0x26e>
  8003ca8:	683b      	ldr	r3, [r7, #0]
- 8003caa:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8003caa:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8003cae:	d102      	bne.n	8003cb6 <HAL_SPI_Transmit+0x274>
  8003cb0:	683b      	ldr	r3, [r7, #0]
  8003cb2:	2b00      	cmp	r3, #0
@@ -10266,7 +10266,7 @@ static HAL_StatusTypeDef SPI_WaitFlagStateUntilTimeout(SPI_HandleTypeDef *hspi, 
   {
     if (Timeout != HAL_MAX_DELAY)
  8003d68:	683b      	ldr	r3, [r7, #0]
- 8003d6a:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8003d6a:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8003d6e:	d051      	beq.n	8003e14 <SPI_WaitFlagStateUntilTimeout+0xe4>
     {
       if (((HAL_GetTick() - tmp_tickstart) >= tmp_timeout) || (tmp_timeout == 0U))
@@ -10485,7 +10485,7 @@ static HAL_StatusTypeDef SPI_WaitFifoStateUntilTimeout(SPI_HandleTypeDef *hspi, 
 
     if (Timeout != HAL_MAX_DELAY)
  8003ea2:	683b      	ldr	r3, [r7, #0]
- 8003ea4:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8003ea4:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8003ea8:	d051      	beq.n	8003f4e <SPI_WaitFifoStateUntilTimeout+0x10e>
     {
       if (((HAL_GetTick() - tmp_tickstart) >= tmp_timeout) || (tmp_timeout == 0U))
@@ -13041,7 +13041,7 @@ HAL_StatusTypeDef UART_WaitOnFlagUntilTimeout(UART_HandleTypeDef *huart, uint32_
     /* Check for the Timeout */
     if (Timeout != HAL_MAX_DELAY)
  8004de6:	69bb      	ldr	r3, [r7, #24]
- 8004de8:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8004de8:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8004dec:	d04b      	beq.n	8004e86 <UART_WaitOnFlagUntilTimeout+0xb2>
     {
       if (((HAL_GetTick() - Tickstart) > Timeout) || (Timeout == 0U))
@@ -14751,7 +14751,7 @@ osStatus_t osKernelInitialize (void) {
  800577c:	e002      	b.n	8005784 <osKernelInitialize+0x54>
     } else {
       stat = osError;
- 800577e:	f04f 33ff 	mov.w	r3, #4294967295
+ 800577e:	f04f 33ff 	mov.w	r3, #4294967295	@ 0xffffffff
  8005782:	60fb      	str	r3, [r7, #12]
     }
   }
@@ -14833,7 +14833,7 @@ osStatus_t osKernelStart (void) {
  80057ec:	e002      	b.n	80057f4 <osKernelStart+0x5c>
     } else {
       stat = osError;
- 80057ee:	f04f 33ff 	mov.w	r3, #4294967295
+ 80057ee:	f04f 33ff 	mov.w	r3, #4294967295	@ 0xffffffff
  80057f2:	60fb      	str	r3, [r7, #12]
     }
   }
@@ -14910,7 +14910,7 @@ osThreadId_t osThreadNew (osThreadFunc_t func, void *argument, const osThreadAtt
  8005852:	2300      	movs	r3, #0
  8005854:	62fb      	str	r3, [r7, #44]	@ 0x2c
     mem  = -1;
- 8005856:	f04f 33ff 	mov.w	r3, #4294967295
+ 8005856:	f04f 33ff 	mov.w	r3, #4294967295	@ 0xffffffff
  800585a:	623b      	str	r3, [r7, #32]
 
     if (attr != NULL) {
@@ -15242,7 +15242,7 @@ void vListInitialise( List_t * const pxList )
 	ensure it remains at the end of the list. */
 	pxList->xListEnd.xItemValue = portMAX_DELAY;
  8005a26:	687b      	ldr	r3, [r7, #4]
- 8005a28:	f04f 32ff 	mov.w	r2, #4294967295
+ 8005a28:	f04f 32ff 	mov.w	r2, #4294967295	@ 0xffffffff
  8005a2c:	609a      	str	r2, [r3, #8]
 
 	/* The list end next and previous pointers point to itself so we know
@@ -15383,7 +15383,7 @@ const TickType_t xValueOfInsertion = pxNewListItem->xItemValue;
 	first, and the algorithm slightly modified if necessary. */
 	if( xValueOfInsertion == portMAX_DELAY )
  8005ac6:	68bb      	ldr	r3, [r7, #8]
- 8005ac8:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8005ac8:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8005acc:	d103      	bne.n	8005ad6 <vListInsert+0x20>
 	{
 		pxIterator = pxList->xListEnd.pxPrevious;
@@ -16183,7 +16183,7 @@ Queue_t * const pxQueue = xQueue;
  8005f16:	6b3b      	ldr	r3, [r7, #48]	@ 0x30
  8005f18:	f893 3044 	ldrb.w	r3, [r3, #68]	@ 0x44
  8005f1c:	b25b      	sxtb	r3, r3
- 8005f1e:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8005f1e:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8005f22:	d103      	bne.n	8005f2c <xQueueGenericSend+0x184>
  8005f24:	6b3b      	ldr	r3, [r7, #48]	@ 0x30
  8005f26:	2200      	movs	r2, #0
@@ -16191,7 +16191,7 @@ Queue_t * const pxQueue = xQueue;
  8005f2c:	6b3b      	ldr	r3, [r7, #48]	@ 0x30
  8005f2e:	f893 3045 	ldrb.w	r3, [r3, #69]	@ 0x45
  8005f32:	b25b      	sxtb	r3, r3
- 8005f34:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8005f34:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8005f38:	d103      	bne.n	8005f42 <xQueueGenericSend+0x19a>
  8005f3a:	6b3b      	ldr	r3, [r7, #48]	@ 0x30
  8005f3c:	2200      	movs	r2, #0
@@ -16435,7 +16435,7 @@ uint32_t ulOriginalBASEPRI, ulNewBASEPRI;
 			be done when the queue is unlocked later. */
 			if( cTxLock == queueUNLOCKED )
  80060a2:	f997 302b 	ldrsb.w	r3, [r7, #43]	@ 0x2b
- 80060a6:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 80060a6:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  80060aa:	d112      	bne.n	80060d2 <xQueueGenericSendFromISR+0x116>
 						}
 					}
@@ -16733,7 +16733,7 @@ Queue_t * const pxQueue = xQueue;
  8006222:	6abb      	ldr	r3, [r7, #40]	@ 0x28
  8006224:	f893 3044 	ldrb.w	r3, [r3, #68]	@ 0x44
  8006228:	b25b      	sxtb	r3, r3
- 800622a:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 800622a:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  800622e:	d103      	bne.n	8006238 <xQueueReceive+0x134>
  8006230:	6abb      	ldr	r3, [r7, #40]	@ 0x28
  8006232:	2200      	movs	r2, #0
@@ -16741,7 +16741,7 @@ Queue_t * const pxQueue = xQueue;
  8006238:	6abb      	ldr	r3, [r7, #40]	@ 0x28
  800623a:	f893 3045 	ldrb.w	r3, [r3, #69]	@ 0x45
  800623e:	b25b      	sxtb	r3, r3
- 8006240:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8006240:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8006244:	d103      	bne.n	800624e <xQueueReceive+0x14a>
  8006246:	6abb      	ldr	r3, [r7, #40]	@ 0x28
  8006248:	2200      	movs	r2, #0
@@ -17389,7 +17389,7 @@ BaseType_t xReturn;
  800655c:	697b      	ldr	r3, [r7, #20]
  800655e:	f893 3044 	ldrb.w	r3, [r3, #68]	@ 0x44
  8006562:	b25b      	sxtb	r3, r3
- 8006564:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8006564:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8006568:	d103      	bne.n	8006572 <vQueueWaitForMessageRestricted+0x2a>
  800656a:	697b      	ldr	r3, [r7, #20]
  800656c:	2200      	movs	r2, #0
@@ -17397,7 +17397,7 @@ BaseType_t xReturn;
  8006572:	697b      	ldr	r3, [r7, #20]
  8006574:	f893 3045 	ldrb.w	r3, [r3, #69]	@ 0x45
  8006578:	b25b      	sxtb	r3, r3
- 800657a:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 800657a:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  800657e:	d103      	bne.n	8006588 <vQueueWaitForMessageRestricted+0x40>
  8006580:	697b      	ldr	r3, [r7, #20]
  8006582:	2200      	movs	r2, #0
@@ -17683,7 +17683,7 @@ BaseType_t xReturn;
 		else
 		{
 			xReturn = errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY;
- 80066f6:	f04f 33ff 	mov.w	r3, #4294967295
+ 80066f6:	f04f 33ff 	mov.w	r3, #4294967295	@ 0xffffffff
  80066fa:	61bb      	str	r3, [r7, #24]
 		}
 
@@ -18331,7 +18331,7 @@ BaseType_t xReturn;
 
 		xNextTaskUnblockTime = portMAX_DELAY;
  8006a2e:	4b16      	ldr	r3, [pc, #88]	@ (8006a88 <vTaskStartScheduler+0xdc>)
- 8006a30:	f04f 32ff 	mov.w	r2, #4294967295
+ 8006a30:	f04f 32ff 	mov.w	r2, #4294967295	@ 0xffffffff
  8006a34:	601a      	str	r2, [r3, #0]
 		xSchedulerRunning = pdTRUE;
  8006a36:	4b15      	ldr	r3, [pc, #84]	@ (8006a8c <vTaskStartScheduler+0xe0>)
@@ -18357,7 +18357,7 @@ BaseType_t xReturn;
  8006a46:	e011      	b.n	8006a6c <vTaskStartScheduler+0xc0>
 		configASSERT( xReturn != errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY );
  8006a48:	697b      	ldr	r3, [r7, #20]
- 8006a4a:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8006a4a:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8006a4e:	d10d      	bne.n	8006a6c <vTaskStartScheduler+0xc0>
 	__asm volatile
  8006a50:	f04f 0350 	mov.w	r3, #80	@ 0x50
@@ -18788,7 +18788,7 @@ BaseType_t xSwitchRequired = pdFALSE;
 					next time through. */
 					xNextTaskUnblockTime = portMAX_DELAY; /*lint !e961 MISRA exception as the casts are only redundant for some ports. */
  8006c94:	4b36      	ldr	r3, [pc, #216]	@ (8006d70 <xTaskIncrementTick+0x160>)
- 8006c96:	f04f 32ff 	mov.w	r2, #4294967295
+ 8006c96:	f04f 32ff 	mov.w	r2, #4294967295	@ 0xffffffff
  8006c9a:	601a      	str	r2, [r3, #0]
 					break;
  8006c9c:	e03f      	b.n	8006d1e <xTaskIncrementTick+0x10e>
@@ -19188,7 +19188,7 @@ void vTaskPlaceOnEventList( List_t * const pxEventList, const TickType_t xTicksT
  8006ee8:	d002      	beq.n	8006ef0 <vTaskPlaceOnEventListRestricted+0x48>
 		{
 			xTicksToWait = portMAX_DELAY;
- 8006eea:	f04f 33ff 	mov.w	r3, #4294967295
+ 8006eea:	f04f 33ff 	mov.w	r3, #4294967295	@ 0xffffffff
  8006eee:	60bb      	str	r3, [r7, #8]
 		}
 
@@ -19439,7 +19439,7 @@ BaseType_t xReturn;
 			if( *pxTicksToWait == portMAX_DELAY )
  800705e:	683b      	ldr	r3, [r7, #0]
  8007060:	681b      	ldr	r3, [r3, #0]
- 8007062:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8007062:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8007066:	d102      	bne.n	800706e <xTaskCheckForTimeOut+0x72>
 			{
 				/* If INCLUDE_vTaskSuspend is set to 1 and the block time
@@ -19843,7 +19843,7 @@ TCB_t *pxTCB;
 		there is an item in the delayed list. */
 		xNextTaskUnblockTime = portMAX_DELAY;
  8007270:	4b0a      	ldr	r3, [pc, #40]	@ (800729c <prvResetNextTaskUnblockTime+0x3c>)
- 8007272:	f04f 32ff 	mov.w	r2, #4294967295
+ 8007272:	f04f 32ff 	mov.w	r2, #4294967295	@ 0xffffffff
  8007276:	601a      	str	r2, [r3, #0]
 		which the task at the head of the delayed list should be removed
 		from the Blocked state. */
@@ -20248,7 +20248,7 @@ TCB_t *pxTCB;
 					configASSERT( pxTCB->ulNotifiedValue == ~0UL );
  80074a8:	6b3b      	ldr	r3, [r7, #48]	@ 0x30
  80074aa:	f8d3 30a0 	ldr.w	r3, [r3, #160]	@ 0xa0
- 80074ae:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 80074ae:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  80074b2:	d00f      	beq.n	80074d4 <xTaskGenericNotifyFromISR+0x110>
 	__asm volatile
  80074b4:	f04f 0350 	mov.w	r3, #80	@ 0x50
@@ -20435,7 +20435,7 @@ const TickType_t xConstTickCount = xTickCount;
 	{
 		if( ( xTicksToWait == portMAX_DELAY ) && ( xCanBlockIndefinitely != pdFALSE ) )
  80075bc:	687b      	ldr	r3, [r7, #4]
- 80075be:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 80075be:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  80075c2:	d10a      	bne.n	80075da <prvAddCurrentTaskToDelayedList+0x3a>
  80075c4:	683b      	ldr	r3, [r7, #0]
  80075c6:	2b00      	cmp	r3, #0
@@ -21841,7 +21841,7 @@ volatile uint32_t ulDummy = 0;
 	configASSERT( uxCriticalNesting == ~0UL );
  8007d8a:	4b15      	ldr	r3, [pc, #84]	@ (8007de0 <prvTaskExitError+0x60>)
  8007d8c:	681b      	ldr	r3, [r3, #0]
- 8007d8e:	f1b3 3fff 	cmp.w	r3, #4294967295
+ 8007d8e:	f1b3 3fff 	cmp.w	r3, #4294967295	@ 0xffffffff
  8007d92:	d00d      	beq.n	8007db0 <prvTaskExitError+0x30>
 	__asm volatile
  8007d94:	f04f 0350 	mov.w	r3, #80	@ 0x50
@@ -23368,7 +23368,7 @@ uint8_t *puc;
 08008684 <memcpy>:
  8008684:	440a      	add	r2, r1
  8008686:	4291      	cmp	r1, r2
- 8008688:	f100 33ff 	add.w	r3, r0, #4294967295
+ 8008688:	f100 33ff 	add.w	r3, r0, #4294967295	@ 0xffffffff
  800868c:	d100      	bne.n	8008690 <memcpy+0xc>
  800868e:	4770      	bx	lr
  8008690:	b510      	push	{r4, lr}

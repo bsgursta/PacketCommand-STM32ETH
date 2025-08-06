@@ -68,8 +68,8 @@ all: main-build
 main-build: ethernet.elf secondary-outputs
 
 # Tool invocations
-ethernet.elf ethernet.map: $(OBJS) $(USER_OBJS) C:\Users\bryan\STM32CubeIDE\workplace_ethernet\ethernet\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ethernet.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\bryan\STM32CubeIDE\workplace_ethernet\ethernet\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ethernet.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ethernet.elf ethernet.map: $(OBJS) $(USER_OBJS) /home/bryan/STM32CubeIDE/Workspace_new/ethernet/STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ethernet.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"/home/bryan/STM32CubeIDE/Workspace_new/ethernet/STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ethernet.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
