@@ -10,5 +10,6 @@
 ../Core/Src/lcd.c:132:20:lcd_setcolumn_address	5
 ../Core/Src/lcd.c:159:19:lcd_writeRAM	1
 ../Core/Src/lcd.c:173:19:lcd_4SPI_init	1
-../Core/Src/lcd.c:189:20:clearLCD	7
-../Core/Src/lcd.c:224:20:fillLCD	5
+../Core/Src/lcd.c:193:20:clearLCD	7
+../Core/Src/lcd.c:228:20:fillLCD	5
+../Core/Src/lcd.c:253:19:lcd_printHELLO	22

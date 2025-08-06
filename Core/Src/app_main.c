@@ -2,7 +2,10 @@
 #include "main.h"
 #include "lcd.h"
 
+
 void AppMain(void){
+
+	//FreeRTOS_IPInit();
 
 	//test LCD
 	lcd_4SPI_init();
@@ -10,13 +13,13 @@ void AppMain(void){
 
 	//THIS WORKS, COLUMN SEEMS TO NOT
 	lcd_setpage_address(1);
-	lcd_setcolumn_address(0);
+	lcd_setcolumn_address(32);
 
 	while(1){
 
 		onLCD();
-		fillLCD();
 		clearLCD();
+		lcd_printHELLO();
 		offLCD();
 	}
 

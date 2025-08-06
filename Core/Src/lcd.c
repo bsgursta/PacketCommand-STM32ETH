@@ -178,8 +178,12 @@ HAL_StatusTypeDef lcd_4SPI_init(){
 	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0, GPIO_PIN_SET);
 
 	//dummy transmission for SPI
+
 	onLCD();
 	offLCD();
+
+	//this is the column where the lcd starts
+	lcd_setcolumn_address(32);
 
 	return HAL_OK;
 
@@ -206,7 +210,7 @@ HAL_StatusTypeDef  clearLCD(void){
 			}
 
 			if(lcd_writeRAM(0x00) != HAL_OK){
-				errors +=1;
+				errors += 1;
 			}
 			//HAL_Delay(10);
 		}
@@ -236,6 +240,93 @@ HAL_StatusTypeDef  fillLCD(void){
 			//HAL_Delay(5);
 		}
 	}
+
+	if(errors == 0){
+		return HAL_OK;
+	}
+	else{
+		return HAL_ERROR;
+	}
+}
+
+//print HELLO message
+HAL_StatusTypeDef lcd_printHELLO(void){
+	int errors = 0;
+
+	lcd_setpage_address(1);
+	lcd_setcolumn_address(32);
+
+	//H
+	if(lcd_writeRAM(0x7F) != HAL_OK){
+		errors += 1;
+	}
+	if(lcd_writeRAM(0x08) != HAL_OK){
+		errors += 1;
+	}
+	if(lcd_writeRAM(0x08) != HAL_OK){
+		errors += 1;
+	}
+	if(lcd_writeRAM(0x7F) != HAL_OK){
+		errors += 1;
+	}
+
+	//space
+	if(lcd_writeRAM(0x00) != HAL_OK){
+		errors += 1;
+	}
+
+	//E
+	if(lcd_writeRAM(0x7F) != HAL_OK){
+		errors += 1;
+	}
+	if(lcd_writeRAM(0x49) != HAL_OK){
+		errors += 1;
+	}
+	if(lcd_writeRAM(0x49) != HAL_OK){
+		errors += 1;
+	}
+	if(lcd_writeRAM(0x41) != HAL_OK){
+		errors += 1;
+	}
+	//space
+	if(lcd_writeRAM(0x00) != HAL_OK){
+		errors += 1;
+	}
+
+	//L
+	for(int i = 0; i < 2; i++){
+		if(lcd_writeRAM(0x7F) != HAL_OK){
+			errors += 1;
+		}
+		if(lcd_writeRAM(0x40) != HAL_OK){
+			errors += 1;
+		}
+		if(lcd_writeRAM(0x40) != HAL_OK){
+			errors += 1;
+		}
+		if(lcd_writeRAM(0x40) != HAL_OK){
+			errors += 1;
+		}
+		//space
+		if(lcd_writeRAM(0x00) != HAL_OK){
+			errors += 1;
+		}
+	}
+
+	//O
+	if(lcd_writeRAM(0x7F) != HAL_OK){
+		errors += 1;
+	}
+	if(lcd_writeRAM(0x41) != HAL_OK){
+		errors += 1;
+	}
+	if(lcd_writeRAM(0x41) != HAL_OK){
+		errors += 1;
+	}
+	if(lcd_writeRAM(0x7F) != HAL_OK){
+		errors += 1;
+	}
+
 
 	if(errors == 0){
 		return HAL_OK;

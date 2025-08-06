@@ -534,6 +534,7 @@ void StartDefaultTask(void *argument)
   /* Infinite loop */
   for(;;)
   {
+	AppMain();
     osDelay(1);
   }
   /* USER CODE END 5 */

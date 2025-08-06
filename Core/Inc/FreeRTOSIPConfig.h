@@ -181,6 +181,7 @@
     #define    ipconfigPORT_SUPPRESS_WARNING 1
 
 //Backward Compatibility
+	//set for either 1 or multiple ip devices
     #define    ipconfigCOMPATIBLE_WITH_SINGLE 1
     #define    ipconfigIPv4_BACKWARD_COMPATIBLE 1
 

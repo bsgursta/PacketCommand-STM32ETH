@@ -18,6 +18,7 @@ RM := rm -rf
 -include Middlewares/FreeRTOS-Plus-TCP/source/portable/BufferManagement/subdir.mk
 -include Middlewares/FreeRTOS-Plus-TCP/source/subdir.mk
 -include Drivers/STM32F7xx_HAL_Driver/Src/subdir.mk
+-include Drivers/BSP/Components/lan8742/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include objects.mk

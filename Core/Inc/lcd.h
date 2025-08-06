@@ -21,10 +21,13 @@ HAL_StatusTypeDef  lcd_RAMpixels(void);
 HAL_StatusTypeDef  lcd_setcolumn_address(int column_num);
 HAL_StatusTypeDef  lcd_setpage_address(int page_num);
 
-HAL_StatusTypeDef setPageaddressing();
-HAL_StatusTypeDef setVerticaladdressing();
+HAL_StatusTypeDef setPageaddressing(void);
+HAL_StatusTypeDef setVerticaladdressing(void);
 
 HAL_StatusTypeDef lcd_writeRAM(uint8_t data);
+
+//printing commands
+HAL_StatusTypeDef lcd_printHELLO(void);
 
 
 

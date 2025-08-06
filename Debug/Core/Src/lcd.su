@@ -10,5 +10,6 @@
 ../Core/Src/lcd.c:132:20:lcd_setcolumn_address	24	static
 ../Core/Src/lcd.c:159:19:lcd_writeRAM	24	static
 ../Core/Src/lcd.c:173:19:lcd_4SPI_init	8	static
-../Core/Src/lcd.c:189:20:clearLCD	24	static,ignoring_inline_asm
-../Core/Src/lcd.c:224:20:fillLCD	24	static
+../Core/Src/lcd.c:193:20:clearLCD	24	static,ignoring_inline_asm
+../Core/Src/lcd.c:228:20:fillLCD	24	static
+../Core/Src/lcd.c:253:19:lcd_printHELLO	16	static
