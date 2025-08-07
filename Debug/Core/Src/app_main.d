@@ -82,7 +82,9 @@ Core/Src/app_main.o: ../Core/Src/app_main.c ../Core/Inc/app_main.h \
  C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv4_Utils.h \
  C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv6_Utils.h \
  C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv4.h \
- C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv6.h
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv6.h \
+ ../Core/Inc/SEGGER_RTT.h \
+ C:/Users/bryan/git/ethernet/Core/Config/SEGGER_RTT_Conf.h
 ../Core/Inc/app_main.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
@@ -169,3 +171,5 @@ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTO
 C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv6_Utils.h:
 C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv4.h:
 C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv6.h:
+../Core/Inc/SEGGER_RTT.h:
+C:/Users/bryan/git/ethernet/Core/Config/SEGGER_RTT_Conf.h:

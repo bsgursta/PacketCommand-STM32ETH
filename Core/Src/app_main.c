@@ -2,6 +2,7 @@
 #include "main.h"
 #include "lcd.h"
 #include "FreeRTOS_IP.h"
+#include "SEGGER_RTT.h"
 
 
 void AppMain(void){
@@ -17,7 +18,7 @@ void AppMain(void){
 	lcd_setcolumn_address(32);
 
 	while(1){
-		printf("** HELLO WORLD!");
+		SEGGER_RTT_printf(0,"HELLO WORLD!\r\n");
 		HAL_Delay(1000);
 		/*onLCD();
 		clearLCD();

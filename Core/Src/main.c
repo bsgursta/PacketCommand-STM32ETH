@@ -186,10 +186,6 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-PUTCHAR_PROTOTYPE{
-	HAL_UART_Transmit(&huart3, (uint8_t *)&ch, 1, 0xFFFF);
-	return ch;
-}
 
 /* USER CODE END 4 */
 
