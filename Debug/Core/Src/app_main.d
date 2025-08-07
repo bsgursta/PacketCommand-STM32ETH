@@ -36,7 +36,53 @@ Core/Src/app_main.o: ../Core/Src/app_main.c ../Core/Inc/app_main.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h \
- ../Core/Inc/lcd.h
+ ../Core/Inc/lcd.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IP.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+ ../Core/Inc/FreeRTOSConfig.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ ../Core/Inc/FreeRTOSIPConfig.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOSIPConfigDefaults.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOSIPDeprecatedDefinitions.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/IPTraceMacroDefaults.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IP_Common.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/portable/Compiler/GCC/pack_struct_start.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/portable/Compiler/GCC/pack_struct_end.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IP_Utils.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IP.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_Sockets.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IP_Private.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_Stream_Buffer.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_Routing.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_DHCP.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_DHCPv6.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_TCP_WIN.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_TCP_IP.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv4_Private.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv6_Private.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_UDP_IP.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/NetworkInterface.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/NetworkBufferManagement.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_DNS.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_DNS_Globals.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_DNS_Callback.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_DNS_Cache.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv4_Utils.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv6_Utils.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv4.h \
+ C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv6.h
 ../Core/Inc/app_main.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
@@ -77,3 +123,49 @@ Core/Src/app_main.o: ../Core/Src/app_main.c ../Core/Inc/app_main.h \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h:
 ../Core/Inc/lcd.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IP.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
+../Core/Inc/FreeRTOSConfig.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
+../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+../Core/Inc/FreeRTOSIPConfig.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOSIPConfigDefaults.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOSIPDeprecatedDefinitions.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/IPTraceMacroDefaults.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IP_Common.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/portable/Compiler/GCC/pack_struct_start.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/portable/Compiler/GCC/pack_struct_end.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IP_Utils.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IP.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_Sockets.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
+../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IP_Private.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_Stream_Buffer.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_Routing.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_DHCP.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_DHCPv6.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_TCP_WIN.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_TCP_IP.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv4_Private.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv6_Private.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_UDP_IP.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/NetworkInterface.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/NetworkBufferManagement.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_DNS.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_DNS_Globals.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_DNS_Callback.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_DNS_Cache.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv4_Utils.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv6_Utils.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv4.h:
+C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IPv6.h:

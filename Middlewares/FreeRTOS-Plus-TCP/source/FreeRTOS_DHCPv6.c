@@ -143,6 +143,17 @@ static BaseType_t prvDHCPv6_handleOption( struct xNetworkEndPoint * pxEndPoint,
 
 /*-----------------------------------------------------------*/
 
+//USER FUNCTIONS
+
+//get current time since the system has started
+uint32_t ulApplicationTimeHook( void )
+{
+    // Convert FreeRTOS tick count to seconds
+    return xTaskGetTickCount() / configTICK_RATE_HZ;
+}
+
+
+
 /**
  * @brief DHCP IPv6 message object
  */

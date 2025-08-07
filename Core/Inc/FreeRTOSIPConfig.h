@@ -140,7 +140,7 @@
 
 //Constants Affecting DHCP and Name Service Behaviour
     #define    ipconfigDHCP_FALL_BACK_AUTO_IP 1
-    #define    ipconfigDHCP_REGISTER_HOSTNAME 1
+    #define    ipconfigDHCP_REGISTER_HOSTNAME 0
     #define    ipconfigDNS_CACHE_ADDRESSES_PER_ENTRY 1
     #define    ipconfigDNS_CACHE_ENTRIES 10
     #define    ipconfigDNS_CACHE_NAME_LENGTH 30
@@ -149,7 +149,7 @@
     #define    ipconfigMAXIMUM_DISCOVER_TX_PERIOD 1
     #define    ipconfigUSE_DHCP 1
     #define    ipconfigUSE_DHCPv6 1
-    #define    ipconfigUSE_DHCP_HOOK 1
+    #define    ipconfigUSE_DHCP_HOOK 0
     #define    ipconfigUSE_DNS 1
     #define    ipconfigUSE_DNS_CACHE 1
     #define    ipconfigUSE_LLMNR 0

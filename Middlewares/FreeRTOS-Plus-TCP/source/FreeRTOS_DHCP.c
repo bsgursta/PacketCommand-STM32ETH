@@ -33,6 +33,9 @@
 /* Standard includes. */
 #include <stdint.h>
 
+//USER INCLUDES
+#include "main.h"
+
 /* FreeRTOS includes. */
 #include "FreeRTOS.h"
 #include "task.h"
@@ -77,6 +80,15 @@
     #endif
 
 /*-----------------------------------------------------------*/
+
+    //USER FUNCTIONS
+    BaseType_t xApplicationGetRandomNumber(uint32_t *pulValue)
+    {
+        if (HAL_RNG_GenerateRandomNumber(&hrng, pulValue) == HAL_OK)
+            return pdTRUE;
+        else
+            return pdFALSE;
+    }
 
 /**
  * @brief The number of end-points that are making use of the UDP-socket.

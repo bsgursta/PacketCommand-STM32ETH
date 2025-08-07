@@ -2706,6 +2706,13 @@ size_t uxIPHeaderSizeSocket( const FreeRTOS_Socket_t * pxSocket )
 }
 /*-----------------------------------------------------------*/
 
+//USER FUNCTIONS
+
+//Hook for when you receive a ping reply
+void vApplicationPingReplyHook( ePingReplyStatus_t eStatus, //reply message from system
+		uint16_t usIdentifier ){
+
+}
 /* Provide access to private members for verification. */
 #ifdef FREERTOS_TCP_ENABLE_VERIFICATION
     #include "aws_freertos_ip_verification_access_ip_define.h"
