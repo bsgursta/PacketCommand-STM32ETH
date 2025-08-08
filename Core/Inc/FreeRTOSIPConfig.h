@@ -148,7 +148,7 @@
     #define    ipconfigDNS_USE_CALLBACKS 1
     #define    ipconfigMAXIMUM_DISCOVER_TX_PERIOD 1
     #define    ipconfigUSE_DHCP 1
-    #define    ipconfigUSE_DHCPv6 1
+    #define    ipconfigUSE_DHCPv6 0
     #define    ipconfigUSE_DHCP_HOOK 0
     #define    ipconfigUSE_DNS 1
     #define    ipconfigUSE_DNS_CACHE 1
@@ -158,7 +158,7 @@
 
 //Constants Affecting IP and ICMP Behaviour
     #define    ipconfigUSE_IPv4 1
-    #define    ipconfigUSE_IPv6 1
+    #define    ipconfigUSE_IPv6 0
     #define    ipconfigFORCE_IP_DONT_FRAGMENT 0
     #define    ipconfigICMP_TIME_TO_LIVE 64
     #define    ipconfigIP_PASS_PACKETS_WITH_IP_OPTIONS 1
@@ -183,7 +183,7 @@
 //Backward Compatibility
 	//set for either 1 or multiple ip devices
     #define    ipconfigCOMPATIBLE_WITH_SINGLE 1
-    #define    ipconfigIPv4_BACKWARD_COMPATIBLE 1
+    #define    ipconfigIPv4_BACKWARD_COMPATIBLE 0
 
 //Extra
 	#define ipconfigUSE_LOOPBACK    1

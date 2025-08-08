@@ -30,6 +30,9 @@
  * @brief Implements the basic functionality for the FreeRTOS+TCP network stack.
  */
 
+/* USER INCLUDES */
+#include "SEGGER_RTT.h"
+
 /* Standard includes. */
 #include <stdint.h>
 #include <stdio.h>
@@ -2713,6 +2716,28 @@ void vApplicationPingReplyHook( ePingReplyStatus_t eStatus, //reply message from
 		uint16_t usIdentifier ){
 
 }
+
+//checks the eNetworkUp type to see if it's  UP or DOWN
+void vApplicationIPNetworkEventHook_Multi(eIPCallbackEvent_t networkEvent, struct xNetworkEndPoint *pxEndPoint){
+	switch(networkEvent){
+	case eNetworkUp:
+		SEGGER_RTT_printf(0,"Network UP! IP: %lup\n", FreeRTOS_ntohl(pxEndPoint->ipv4_settings.ulIPAddress));
+		break;
+	case eNetworkDown:
+		SEGGER_RTT_printf(0,"Network Down!");
+		break;
+	}
+}
+
+//get a random sequence number for the first packet
+uint32_t ulApplicationGetNextSequenceNumber( uint32_t ulSourceAddress,
+                                           uint16_t usSourcePort,
+                                           uint32_t ulDestinationAddress,
+                                           uint16_t usDestinationPort )
+{
+    return (uint32_t) rand() ^ (uint32_t) xTaskGetTickCount();
+}
+
 /* Provide access to private members for verification. */
 #ifdef FREERTOS_TCP_ENABLE_VERIFICATION
     #include "aws_freertos_ip_verification_access_ip_define.h"

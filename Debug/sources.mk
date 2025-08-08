@@ -23,6 +23,7 @@ C_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Core/Src \
+Core/Src/user \
 Core/Startup \
 Drivers/BSP/Components/lan8742 \
 Drivers/STM32F7xx_HAL_Driver/Src \

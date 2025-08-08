@@ -7,6 +7,7 @@
 
 void AppMain(void){
 
+	//Initalize IP stack, setup network hardware beforehand, creates the RTOS task
 	//FreeRTOS_IPInit_Multi();
 
 	//test LCD
