@@ -1,12 +1,21 @@
 #include "app_main.h"
 #include "main.h"
 #include "lcd.h"
+#include "FreeRTOS.h"
 #include "FreeRTOS_IP.h"
 #include "SEGGER_RTT.h"
 #include "TCP_IP.h"
+#include "proj_tasks.h"
 
 
 void AppMain(void){
+
+	//Task to create network interface and socket
+	xTaskCreate(vInterfaceSocketTask, "Task Initialize Interface & Socket",
+			2048, //use of stack for task
+			NULL,
+			40,
+			NULL );
 
 	//test LCD
 	lcd_4SPI_init();

@@ -16,6 +16,7 @@ extern "C" {
 // Function prototypes
 void initailizeTCP(void);
 NetworkInterface_t* initializeNetworkInterface(void);
+Socket_t ConfigTCPClientSocket(void);
 
 // Type definitions
 typedef struct {

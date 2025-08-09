@@ -178,7 +178,7 @@ SECTIONS
   } >RAM
   
   /*Modification start */
-  
+  /*
   .lwip_sec(NOLOAD):
   {
   	. = ABSOLUTE(0x2007c000);
@@ -190,6 +190,7 @@ SECTIONS
   	. = ABSOLUTE(0x2007c140);
   	*(.LwIPHeap)
   } >SRAM2
+  */
   /*Modification end */
   	
 

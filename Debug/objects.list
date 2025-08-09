@@ -18,6 +18,7 @@
 "./Core/Src/user/TCP_IP.o"
 "./Core/Src/user/app_main.o"
 "./Core/Src/user/lcd.o"
+"./Core/Src/user/proj_tasks.o"
 "./Core/Startup/startup_stm32f767zitx.o"
 "./Drivers/BSP/Components/lan8742/lan8742.o"
 "./Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o"

@@ -6,7 +6,7 @@
 }
 #endif
 
-void initializeInterfaceEndpoint(void);
+void vInterfaceSocketTask(void * argument);
 void AppMain(void);
 
 #ifdef __cplusplus

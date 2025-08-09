@@ -105,9 +105,6 @@ int main(void)
   MX_RNG_Init();
   /* USER CODE BEGIN 2 */
 
-  //Initialize networkInterface
-  NetworkInterface_t* ethInterace = initializeNetworkInterface();
-
   /* USER CODE END 2 */
 
   /* Init scheduler */
