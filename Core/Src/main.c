@@ -29,6 +29,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "app_main.h"
+#include "TCP_IP.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -103,6 +104,9 @@ int main(void)
   MX_ETH_Init();
   MX_RNG_Init();
   /* USER CODE BEGIN 2 */
+
+  //Initialize networkInterface
+  NetworkInterface_t* ethInterace = initializeNetworkInterface();
 
   /* USER CODE END 2 */
 

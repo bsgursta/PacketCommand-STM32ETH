@@ -49,6 +49,9 @@
 #include "FreeRTOS_Sockets.h"
 #include "FreeRTOS_IP_Private.h"
 
+//USER FUNCTIONS
+#define pdTICKS_TO_MS(xTicks) ((TickType_t)(((uint64_t)(xTicks) * 1000U) / configTICK_RATE_HZ))
+
 #if ( ipconfigUSE_TCP == 1 )
 
 /* Constants used for Smoothed Round Trip Time (SRTT). */

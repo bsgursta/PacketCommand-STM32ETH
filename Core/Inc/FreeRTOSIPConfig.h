@@ -37,8 +37,9 @@
 	#define ipconfigHAS_ROUTING_STATISTICS 1
 
 //Hardware and Driver Specific Settings
-	//Adds size to the buffere requested by the application writer
-	#define ipconfigBUFFER_PADDING 8
+	//Adds size to the buffer requested by the application writer
+		//set to match IP_Utils (line 1028)
+	#define ipconfigBUFFER_PADDING 34
 	//offsets the pointer to the start of the Ethernet frame
 	#define ipconfigPACKET_FILLER_SIZE 2
 	//Big Endian or Little Endian

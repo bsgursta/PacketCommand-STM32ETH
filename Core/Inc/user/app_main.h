@@ -6,6 +6,7 @@
 }
 #endif
 
+void initializeInterfaceEndpoint(void);
 void AppMain(void);
 
 #ifdef __cplusplus
