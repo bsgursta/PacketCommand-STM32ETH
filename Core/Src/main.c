@@ -20,6 +20,7 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "eth.h"
+#include "i2s.h"
 #include "rng.h"
 #include "spi.h"
 #include "usart.h"
@@ -103,7 +104,7 @@ int main(void)
   MX_SPI2_Init();
   MX_ETH_Init();
   MX_RNG_Init();
-  MX_SPI1_Init();
+  MX_I2S1_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */

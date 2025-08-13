@@ -24,15 +24,19 @@ NetworkInterface_t* initializeNetworkInterface(void){
 
 	//use IPV4 because it's for less code and less RAM
 		//actual IPV4 address
-		uint8_t ipAddress[4] = {10, 114, 20, 200};
-		uint8_t netMask[4] = {255, 255, 252, 0};
-		uint8_t gatewayAddress[4] = {10, 114, 20, 1};
-		uint8_t dnsAddress[4] = {104,222,16,6};
+		const uint8_t ipAddress[4] = {10, 114, 20, 200};
+		const uint8_t netMask[4] = {255, 255, 252, 0};
+		const uint8_t gatewayAddress[4] = {10, 114, 20, 1};
+		const uint8_t dnsAddress[4] = {104,222,16,6};
 
 
 	//MAC address -> physical hardware identifier, interface card
 		uint8_t macAddress[6];
 		memcpy(macAddress, heth.Init.MACAddr, 6); // get MAC from config file
+
+		//static NetworkInterface_t xInterfaces[1];
+
+		//static NetworkEndPoint_t xEndPoints[4];
 
 	//Add network interface and endpoint to FreeRTOS
 		FreeRTOS_FillEndPoint(pxInterface,xLocalEndPoint,ipAddress,netMask,gatewayAddress,dnsAddress, macAddress);
@@ -84,10 +88,12 @@ Socket_t ConfigTCPClientSocket(void){
         // Stop here for debugging
         while(1);
     }
+
+    //socket was created successfully
     else
     {
         printf("Socket created successfully!\n");
-    }
+
 
     //set socket options for the given socket
         /* Set send and receive time outs. */
@@ -115,6 +121,7 @@ Socket_t ConfigTCPClientSocket(void){
 
         	SEGGER_RTT_printf(0,"Client socket is valid\n");
         }
+    }
 
         return xClientSocket;
 

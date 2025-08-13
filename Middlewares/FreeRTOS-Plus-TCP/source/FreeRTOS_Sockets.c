@@ -351,6 +351,24 @@ static int32_t prvSendTo_ActualSend( const FreeRTOS_Socket_t * pxSocket,
                                      const struct freertos_sockaddr * pxDestinationAddress,
                                      size_t uxPayloadOffset );
 
+//USER FUNCTIONS
+BaseType_t xApplicationGetRandomNumber( uint32_t *pulNumber )
+{
+    // Generate a 32-bit random number and store it in *pulNumber
+    // Return pdTRUE if successful, else pdFALSE
+
+    // Example: use your MCU's hardware RNG or a simple PRNG
+    static uint32_t seed = 123456789;
+
+    // Simple Linear Congruential Generator example (not cryptographically secure)
+    seed = (1103515245 * seed + 12345) & 0x7FFFFFFF;
+    *pulNumber = seed;
+
+    return pdTRUE;
+}
+
+//USER FUNCTIONS
+
 #if ( ipconfigUSE_TCP == 1 ) && ( ipconfigUSE_CALLBACKS == 1 )
 
 /** @brief The application can attach callback functions to a socket. In this function,

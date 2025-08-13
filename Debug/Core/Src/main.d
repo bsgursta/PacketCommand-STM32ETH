@@ -24,6 +24,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c_ex.h \
+ ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2s.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rng.h \
@@ -47,9 +48,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
- ../Core/Inc/eth.h ../Core/Inc/main.h ../Core/Inc/rng.h ../Core/Inc/spi.h \
- ../Core/Inc/usart.h ../Core/Inc/usb_otg.h ../Core/Inc/gpio.h \
- C:/Users/bryan/git/ethernet/Core/Inc/user/app_main.h \
+ ../Core/Inc/eth.h ../Core/Inc/main.h ../Core/Inc/i2s.h ../Core/Inc/rng.h \
+ ../Core/Inc/spi.h ../Core/Inc/usart.h ../Core/Inc/usb_otg.h \
+ ../Core/Inc/gpio.h C:/Users/bryan/git/ethernet/Core/Inc/user/app_main.h \
  C:/Users/bryan/git/ethernet/Core/Inc/user/TCP_IP.h \
  C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_Routing.h \
  C:/Users/bryan/git/ethernet/Middlewares/FreeRTOS-Plus-TCP/source/include/FreeRTOS_IP.h \
@@ -113,6 +114,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c_ex.h:
+../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2s.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rng.h:
@@ -138,6 +140,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 ../Core/Inc/eth.h:
 ../Core/Inc/main.h:
+../Core/Inc/i2s.h:
 ../Core/Inc/rng.h:
 ../Core/Inc/spi.h:
 ../Core/Inc/usart.h:

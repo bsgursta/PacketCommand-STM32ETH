@@ -133,14 +133,14 @@
 //Constants Affecting the ARP Behaviour
     #define    ipconfigARP_CACHE_ENTRIES 10
     #define    ipconfigARP_STORES_REMOTE_ADDRESSES 1
-    #define    ipconfigARP_USE_CLASH_DETECTION 1
+    #define    ipconfigARP_USE_CLASH_DETECTION 0
     #define    ipconfigMAX_ARP_AGE 150
     #define    ipconfigMAX_ARP_RETRANSMISSIONS 0
     #define    ipconfigUSE_ARP_REMOVE_ENTRY 1
     #define    ipconfigUSE_ARP_REVERSED_LOOKUP 0
 
 //Constants Affecting DHCP and Name Service Behaviour
-    #define    ipconfigDHCP_FALL_BACK_AUTO_IP 1
+    #define    ipconfigDHCP_FALL_BACK_AUTO_IP 0
     #define    ipconfigDHCP_REGISTER_HOSTNAME 0
     #define    ipconfigDNS_CACHE_ADDRESSES_PER_ENTRY 1
     #define    ipconfigDNS_CACHE_ENTRIES 10
@@ -148,7 +148,7 @@
     #define    ipconfigDNS_REQUEST_ATTEMPTS 500
     #define    ipconfigDNS_USE_CALLBACKS 1
     #define    ipconfigMAXIMUM_DISCOVER_TX_PERIOD 1
-    #define    ipconfigUSE_DHCP 1
+    #define    ipconfigUSE_DHCP 0
     #define    ipconfigUSE_DHCPv6 0
     #define    ipconfigUSE_DHCP_HOOK 0
     #define    ipconfigUSE_DNS 1

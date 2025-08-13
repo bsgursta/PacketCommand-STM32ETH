@@ -6,6 +6,7 @@
 #include "SEGGER_RTT.h"
 #include "TCP_IP.h"
 #include "proj_tasks.h"
+#include "mic.h"
 
 
 void AppMain(void){
@@ -18,6 +19,9 @@ void AppMain(void){
 			NULL );
 
 	//test LCD
+
+	//configureI2S();
+	//getAudio();
 	lcd_4SPI_init();
 	setPageaddressing();
 
