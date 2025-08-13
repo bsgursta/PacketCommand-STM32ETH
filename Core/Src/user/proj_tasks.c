@@ -5,11 +5,11 @@
 #include "TCP_IP.h"
 
 void vInterfaceSocketTask(void * argument) {
-//Initialize networkInterface
-	NetworkInterface_t* ethInterace = initializeNetworkInterface();
+	 //Initialize networkInterface
+	 initializeNetworkInterface();
 
 	//Initialize Socket
-	Socket_t clientSocket = ConfigTCPClientSocket();
+	ConfigTCPClientSocket();
 
     for(;;) {
         vTaskDelay(1000);

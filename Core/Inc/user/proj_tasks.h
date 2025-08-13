@@ -10,7 +10,7 @@ extern "C" {
 #endif
 
 //task functions
-Socket_t ConfigTCPClientSocket(void);
+void ConfigTCPClientSocket(void);
 
 #ifdef __cplusplus
 }
