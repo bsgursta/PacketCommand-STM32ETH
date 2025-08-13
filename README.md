@@ -18,6 +18,6 @@ Rust-based companion-app: https://github.com/bsgursta/PacketCommand_app
 
 ### finish MEMS microphone driver
 
-# establish how do 3-way, and have the address from the desktop
+### establish how do 3-way, and have the address from the desktop
 
 ### Consider firewall stuff to expand service
