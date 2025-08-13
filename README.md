@@ -12,7 +12,7 @@ Rust-based companion-app: https://github.com/bsgursta/PacketCommand_app
  1)
 
 
-# TODO:
+## TODO:
 
 ### Work on the lcd ascii decoding for the pixels, remember to skip first bit
 
