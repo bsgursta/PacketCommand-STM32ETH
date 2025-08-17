@@ -34,11 +34,13 @@ void AppMain(void){
 	while(1){
 		//SEGGER_RTT_printf(0,"HELLO WORLD!\r\n");
 		getAudio();
-		HAL_Delay(5000);
-		/*onLCD();
+		HAL_Delay(2000);
+		/*
+		onLCD();
 		clearLCD();
 		lcd_printHELLO();
-		offLCD();*/
+		offLCD();
+		*/
 	}
 
 }

@@ -12,10 +12,10 @@ static char TxBuffer[8];
 //initailize network interface and create socket, only 1 for my current applications
 void vInterfaceSocketTask(void * argument) {
 	 //Initialize networkInterface
-	 initializeNetworkInterface();
+	 //initializeNetworkInterface();
 
 	//Initialize Socket
-	xClientSocket = ConfigTCPClientSocket();
+	//xClientSocket = ConfigTCPClientSocket();
 
     for(;;) {
         vTaskDelay(1000);
