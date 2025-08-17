@@ -28,7 +28,7 @@ void vTCPSendDataTask(void * argument){
 
 	for(;;){
 		//send data on buffer
-		vSendTCP(&TxBuffer, len(TxBuffer));
+		vSendTCP(&TxBuffer, len(TxBuffer), xClientSocket);
 	}
 }
 

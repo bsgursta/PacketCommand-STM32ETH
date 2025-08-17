@@ -25,9 +25,9 @@ HAL_StatusTypeDef configureI2S(void){
 
 /*
  * Pins:
- * 		WS -> PB2 (ORANGE)
- * 		SCK -> PB6 (BROWN)
- * 		SDA -> PB9 (WHITE)
+ * 		WS -> PA4 (ORANGE)
+ * 		SCK -> PC10 (BROWN)
+ * 		SDA -> PC12 (WHITE)
  */
 
 
@@ -39,7 +39,7 @@ uint32_t getAudio(){
 	HAL_StatusTypeDef status;
 
 	// For 32-bit data, pass the buffer as uint16_t* and double the size
-	status = HAL_I2S_Receive(&hi2s1, (uint16_t *)i2sRxBuffer, NUM_SAMPLES * 2, HAL_MAX_DELAY);
+	status = HAL_I2S_Receive(&hi2s3, (uint16_t *)i2sRxBuffer, NUM_SAMPLES * 2, HAL_MAX_DELAY);
 
 	if (status != HAL_OK)
 	{

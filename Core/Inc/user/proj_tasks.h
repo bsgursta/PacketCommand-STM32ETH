@@ -10,7 +10,7 @@ extern "C" {
 #endif
 
 //task functions
-void ConfigTCPClientSocket(void);
+void vTCPSendDataTask(void * argument);
 void vInterfaceSocketTask(void * argument);
 
 #ifdef __cplusplus

@@ -104,7 +104,7 @@ int main(void)
   MX_SPI2_Init();
   MX_ETH_Init();
   MX_RNG_Init();
-  MX_I2S1_Init();
+  MX_I2S3_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */

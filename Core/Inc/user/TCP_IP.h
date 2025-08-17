@@ -16,7 +16,7 @@ extern "C" {
 // Function prototypes
 void initializeNetworkInterface(void);
 Socket_t ConfigTCPClientSocket(void);
-void vSendTCP(char *pcTxBuffer, const size_t xTransmissionLength);
+//void vSendTCP(char *pcTxBuffer, const size_t xTransmissionLength, Socket_t xClientSocket);
 void vshutdownSocket(Socket_t socket_to_close);
 
 // Type definitions

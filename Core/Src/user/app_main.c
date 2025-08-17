@@ -32,7 +32,8 @@ void AppMain(void){
 	lcd_setcolumn_address(32);
 
 	while(1){
-		SEGGER_RTT_printf(0,"HELLO WORLD!\r\n");
+		//SEGGER_RTT_printf(0,"HELLO WORLD!\r\n");
+		getAudio();
 		HAL_Delay(5000);
 		/*onLCD();
 		clearLCD();

@@ -2,9 +2,15 @@
 
 #include "TCP_IP.h"
 #include "FreeRTOS_Routing.h"
+#include "FreeRTOS_Sockets.h"
 #include "NetworkInterface.h"
 #include "SEGGER_RTT.h"
 #include "eth.h"
+
+
+#define configNUM_NETWORK_INTERFACES 1
+#define configNUM_ENDPOINTS 1
+#define TIMEOUT_MS 10000
 
 //use IPV4 because it's for less code and less RAM
 	//actual IPV4 address
@@ -18,11 +24,6 @@ const TickType_t shutdown_timeout_ticks = pdMS_TO_TICKS(TIMEOUT_MS);
 
 //MAC address -> physical hardware identifier, interface card
 static uint8_t macAddress[6];
-
-
-
-#define configNUM_NETWORK_INTERFACES 1
-#define configNUM_ENDPOINTS 1
 
 //saved in MCU RAM
 static NetworkInterface_t xInterfaces[ configNUM_NETWORK_INTERFACES ];
@@ -98,14 +99,15 @@ Socket_t ConfigTCPClientSocket(void){
         } else {
         	SEGGER_RTT_printf(0,"Client socket is valid\n");
         }
-
+    return xClientSocket;
 }
 
 //IP address for desktop : 10.114.20.52
 	//port number: 30301
 
+/*
 //send data over TCP
-void vSendTCP(char *pcTxBuffer, const size_t xTransmissionLength){
+void vSendTCP(char *pcTxBuffer, const size_t xTransmissionLength, Socket_t xSocket){
 	struct freertos_sockaddr xRemoteAddress;
 	BaseType_t xAlreadyTransmitted = 0, xBytesSent = 0;
 	TaskHandle_t xRxTask = NULL;
@@ -119,7 +121,7 @@ void vSendTCP(char *pcTxBuffer, const size_t xTransmissionLength){
     xRemoteAddress.sin_family = FREERTOS_AF_INET4; //ipv4 family
 
     //recheck Socket
-    configASSERT( xClientSocket != FREETOS_INVALID_SOCKET);
+    configASSERT( xSocket != FREERTOS_INVALID_SOCKET);
 
     //connect to remote socket
     if(FreeRTOS_connect(xSocket, &xRemoteAddress, size(xRemoteAddress) == 0)){
@@ -132,7 +134,7 @@ void vSendTCP(char *pcTxBuffer, const size_t xTransmissionLength){
 
     		//get the number of bytes actually sent
     		xBytesSend = FreeRTOS_send(
-    					xClientSocket, //socket being sent to
+    					xSocket, //socket being sent to
 						&(pcBufferToTransmit[xAlreadyTransmitted]), //data being sent
 						xLenToSend, //remaining length of data being sent
 						0);
@@ -148,7 +150,7 @@ void vSendTCP(char *pcTxBuffer, const size_t xTransmissionLength){
     	}
     }
 }
-
+/*
 //shutdown the socket that is passed in
 void vshutdownSocket(Socket_t *socket_closing){
 
@@ -185,5 +187,5 @@ void vshutdownSocket(Socket_t *socket_closing){
 
 
 }
-
+*/
 
