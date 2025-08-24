@@ -33,7 +33,7 @@ extern "C" {
 /* USER CODE BEGIN Includes */
 	extern SPI_HandleTypeDef hspi2;
 	extern RNG_HandleTypeDef hrng;
-	extern I2S_HandleTypeDef hi2s3;
+	extern I2S_HandleTypeDef hi2s1;
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

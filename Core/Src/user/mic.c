@@ -40,14 +40,18 @@ uint32_t getAudio(){
 	uint32_t i2sRxBuffer[1]; // Single 32-bit sample
 
 	//pass buffer as uint16_t* but with size for 32-bit data
-	status = HAL_I2S_Receive(&hi2s3, (uint16_t*)i2sRxBuffer, 2, timeout_I2S);
+	status = HAL_I2S_Receive(&hi2s1, (uint16_t*)i2sRxBuffer, 2, timeout_I2S);
 
-	printf("I2S Mode: 0x%08lX\n", hi2s3.Instance->I2SCFGR & SPI_I2SCFGR_I2SCFG);
+
+	///should print 0x0..0300
+	//printf("I2S Mode: 0x%08lX\n", hi2s1.Instance->I2SCFGR & SPI_I2SCFGR_I2SCFG);
 
 	//I2S state is 1, correct
 
 	if(status == HAL_OK){
 		SEGGER_RTT_printf(0,"works\n");
+		SEGGER_RTT_printf(0, "i2sRxBuffer[0]: 0x%08X\n", i2sRxBuffer[0]);
+
 	}
 	if (status != HAL_OK) {
 	    if (status == HAL_BUSY) {
